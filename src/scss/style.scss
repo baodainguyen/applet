@@ -1,0 +1,91 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+$primary: #4ab5f4;
+$secondary: #6ebe00;
+$light: #f3faff;
+$dark: #2c303a;
+$border-radius-sm: 0.27rem;
+$border-radius: 0.33rem;
+$border-radius-lg: 0.69rem;     /*rounded-3*/
+$navbar-light-active-color: $primary;
+$thumbnail-border-radius: 3.69 * $border-radius-lg;
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+    $utilities,
+    (
+        "width":
+            map-merge(
+                map-get($utilities, "width"),
+                (
+                    values:
+                        map-merge(
+                            map-get(map-get($utilities, "width"), "values"),
+                            (
+                                fm2r: calc(100% - 2rem),
+                            )
+                        ),
+                )
+            ),
+        "rounded":
+            map-merge(
+                map-get($utilities, "rounded"),
+                (
+                    values:
+                        map-merge(
+                            map-get(map-get($utilities, "rounded"), "values"),
+                            (
+                                4: 1.2rem,
+                                lg: 1.5rem,
+                                xl: 1.8rem,
+                            )
+                        ),
+                )
+            ),
+        "padding-y":
+            map-merge(
+                map-get($utilities, "padding-y"),
+                (
+                    values:
+                        map-merge(
+                            map-get(map-get($utilities, "padding-y"), "values"),
+                            (
+                                6: $spacer * 4.2,
+                                7: $spacer * 5.7,
+                            )
+                        ),
+                )
+            ),
+    )
+);
+
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import "../../node_modules/bootstrap";
+
+@import "./SF-Pro.scss";
+
+.fontSFProD {font-family: 'SF Pro Display';}
+.fontSFProT {font-family: 'SF Pro Text';}
+
+/* @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";*/
+
+.dnb-ic {
+     &-out {
+        display:inline-block;
+        width: 60px; height: 60px;
+     }
+
+     &-bg{
+        background-color: white;
+        background-position: 50%; background-size: cover;
+        width: 100%; height: 100%;
+        clip-path: path('M 2 2 C 4 0 9 0 10 0 C 11 0 16 0 18 2 C 20 4 20 7 20 10 C 20 13 20 16 18 18 C 16 20 13 20 10 20 C 7 20 4 20 2 18 C 0 16 0 13 0 10 C 0 7 0 4 2 2');
+        clip-path: path('M 15 15 C 30 0 67.5 0 75 0 C 82.5 0 120 0 135 15 C 150 30 150 52.5 150 75 C 150 97.5 150 120 135 135 C 120 150 97.5 150 75 150 C 52.5 150 30 150 15 135 C 0 120 0 97.5 0 75 C 0 52.5 0 30 15 15');
+        clip-path: path('M 6 6 C 12 0 27 0 30 0 C 33 0 48 0 54 6 C 60 12 60 21 60 30 C 60 39 60 48 54 54 C 48 60 39 60 30 60 C 21 60 12 60 6 54 C 0 48 0 39 0 30 C 0 21 0 12 6 6');
+      }
+  }
+
+
