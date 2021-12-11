@@ -6,6 +6,7 @@ import {
 import { Home } from './pages/Home';
 import { CommingSoon } from './pages/CommingSoon';
 import { Navigator, Footer } from '../src/components/Elements';
+import { ListApp } from './global/Icons';
 import './scss/style.scss';
 
 class App extends Component {
@@ -38,7 +39,12 @@ class BodyPage extends Component {
                 {navs.map((name, index) => {
                     const _path = removeSpace(name);
                     const _page = getPage(name);
-                    return <Route exact path={`/${_path}`} element={_page} key={index}/>
+                    return <Route exact path={`/${_path}`} element={_page} key={index} />
+                })}
+
+                {ListApp.map((app, i) => {
+                    const { Page, Path } = app;
+                    return <Route exact path={`/${Path}`} element={Page} />
                 })}
             </Routes>
         );

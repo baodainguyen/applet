@@ -1,4 +1,5 @@
 import React from 'react';
+import { AppLinkedIn } from '../pages/Applet001';
 
 export function LinkedIn() {
     return (<div className="dnb-ic-out">
@@ -7,3 +8,26 @@ export function LinkedIn() {
         </svg></div>
     </div>)
 }
+export const ListApp = [
+    {
+        Path: 'app001',
+        Page: <AppLinkedIn />,
+        Name: 'LinkedIn',
+        Sub: `Connect, Apply & Get Hired`,
+        Logo: <LinkedIn />
+    },
+    {
+        Path: 'app002',
+        Page: <AppLinkedIn />,
+        Name: 'Applet 002',
+        Sub: `Connect, Apply & Get Hired`,
+        Logo: <LinkedIn />
+    },
+    {
+        Path: 'app003',
+        Page: <AppLinkedIn />,
+        Name: 'Applet 003',
+        Sub: `Connect, Apply & Get Hired`,
+        Logo: <LinkedIn />
+    },
+]

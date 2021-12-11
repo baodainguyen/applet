@@ -13,7 +13,7 @@ export class Navigator extends Component {
                 <Container>
                     {navs.map((name, i) => {
                         const _path = removeSpace(name);
-                        const _page = getPage(name);
+                        //const _page = getPage(name);
                         if (_path === '') {
                             return <>
                                 <Navbar.Brand as={Link} to={`/${_path}`} href="#home" key={`nav-brand-${i}`}>
